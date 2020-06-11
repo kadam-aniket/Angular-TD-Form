@@ -9,12 +9,19 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   //title = 'TD-Forms';
   defaultQuestion = 'pet';
+   user={
+    username: '',
+    email: '',
+    secretQuestion: ''
+  };
   
   suggestUserName(){
     const suggestName = 'Superuser'
   }
 
   onSubmit(form : NgForm){
-    console.log(form)
+    this.user.username = form.value.username
+    this.user.email = form.value.email
+    this.user.secretQuestion = form.value.secret
   }
 }
