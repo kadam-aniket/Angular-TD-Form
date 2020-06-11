@@ -23,5 +23,6 @@ export class AppComponent {
     this.user.username = form.value.username
     this.user.email = form.value.email
     this.user.secretQuestion = form.value.secret
+    form.reset();
   }
 }
